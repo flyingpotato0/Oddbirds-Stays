@@ -1,0 +1,86 @@
+:root{
+  /* Palette derived from provided logo */
+  --color-deep-green: #0e3b33; /* background */
+  --color-gold: #d6b76a; /* gold ring/text */
+  --color-cream: #f3ead8; /* cream lines/text */
+  --color-blue: #2b9adf; /* bird accent */
+  --max-width:1200px;
+  --accent:var(--color-gold);
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;line-height:1.45}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+.site-header{background:#fff;position:sticky;top:0;z-index:40;border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;text-decoration:none;color:#111}
+.nav{display:flex;gap:1.25rem}
+.nav a{color:#111;text-decoration:none;font-weight:500}
+.menu-toggle{display:none;background:transparent;border:0;font-size:1.4rem}
+
+.hero{position:relative;overflow:hidden;height:66vh;min-height:420px;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background-color:var(--color-deep-green);background-image:url('Images/55bb323b-c4aa-4ac3-8e60-bff5378ad8c6.avif');background-size:cover;background-position:center;filter:contrast(1.02) saturate(.95)}
+.hero-content{position:relative;padding:4rem 1rem;color:var(--color-cream);max-width:720px;text-align:left}
+.hero h1{font-family:'Playfair Display',serif;font-size:5rem;margin:0 0 .5rem;text-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.lead{font-size:1.5rem;color:rgba(243,234,216,0.9);margin:0 0 1.25rem}
+.btn{display:inline-block;background:var(--color-gold);color:var(--color-deep-green);padding:.75rem 1.2rem;border-radius:4px;text-decoration:none;font-weight:600}
+
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;margin:2.5rem 0 1rem}
+.products .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.card{background:#fff;border:1px solid #f0f0f0;padding:0;border-radius:6px;overflow:hidden}
+.card-media{height:180px;background-size:cover;background-position:center}
+.card h3{font-family:'Playfair Display',serif;padding:.75rem 1rem;margin:0}
+.price{padding:.5rem 1rem;color:var(--muted);margin:0}
+
+.about{padding:2rem 0}
+.about-inner{display:flex;gap:2rem;align-items:center}
+.text-link{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* Our Spaces card */
+.spaces-card{display:grid;grid-template-columns:360px 1fr;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e6e6;margin:2rem auto;width:80%}
+.spaces-left{background:var(--color-deep-green);color:var(--color-cream);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:flex-start;gap:1.5rem}
+.spaces-left h2{font-family:'Playfair Display',serif;font-size:3.2rem;margin:0;line-height:0.95}
+.spaces-lead{margin:0;color:rgba(243,234,216,0.9);max-width:260px}
+.rooms{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.room{display:flex;align-items:center;justify-content:center;padding:1.1rem 1.25rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);color:var(--color-cream);font-size:1.25rem;font-family:'Playfair Display',serif;text-decoration:none;text-align:center}
+.room{cursor:pointer}
+.room.active{background:rgba(243,234,216,0.08);color:var(--color-cream)}
+.room:focus,.room:active{color:var(--color-cream);outline:none}
+.spaces-media{position:relative;min-height:320px;overflow:hidden;background-image:url('Images/balcony.png');background-size:cover;background-position:center}
+.spaces-media .slide{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .8s ease;opacity:0}
+.spaces-media .slide.show{opacity:1}
+
+/* Expanded room card overlay */
+.room-card{position:absolute;left:18px;bottom:18px;width:276px;background:rgba(10,59,51,0.88);color:var(--color-cream);border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(0,0,0,0.25);transform:translateY(0);transition:opacity .25s ease,transform .25s ease;opacity:0;pointer-events:none;font-size:0.95rem}
+.room-card.visible{opacity:1;pointer-events:auto}
+.room-card-close{position:absolute;right:12px;top:12px;background:transparent;border:1px solid rgba(243,234,216,0.15);color:var(--color-cream);width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer}
+.room-card-title{font-family:'Playfair Display',serif;font-size:1.44rem;margin:0 0 .45rem}
+.room-features{list-style:none;padding:0;margin:0 0 .9rem;color:rgba(243,234,216,0.95);font-size:0.95rem}
+.room-features li{padding:0.4rem 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;gap:.65rem;align-items:center}
+.room-actions{display:flex;gap:0.75rem;justify-content:center}
+.btn.ghost{background:transparent;border:1px solid rgba(243,234,216,0.25);color:var(--color-cream);padding:.6rem 1rem;border-radius:8px;text-decoration:none}
+.btn{display:inline-block;background:var(--color-gold);color:var(--color-deep-green);padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
+
+@media (max-width:900px){
+  .room-card{left:12px;top:12px;width:calc(100% - 24px);border-radius:10px}
+}
+
+@media (max-width:900px){
+  .spaces-card{grid-template-columns:1fr;}
+  .spaces-left{padding:1.5rem}
+  .spaces-left h2{font-size:2.4rem}
+}
+
+.site-footer{border-top:1px solid #eee;padding:1.25rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.footer-nav{display:flex;gap:1rem}
+.footer-nav a{color:var(--muted);text-decoration:none}
+
+@media (max-width:800px){
+  .hero h1{font-size:2.1rem}
+  .menu-toggle{display:block}
+  .nav{position:fixed;right:0;top:0;height:100vh;width:75%;max-width:300px;background:#fff;transform:translateX(110%);flex-direction:column;padding:4rem 1.25rem;gap:1.25rem;box-shadow:-8px 0 24px rgba(0,0,0,.08);transition:transform .28s}
+  .nav.open{transform:translateX(0)}
+  .header-inner{gap:1rem}
+  .about-inner{flex-direction:column}
+}

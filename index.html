@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oddbirds Stays Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Palms</a>
+      <nav class="nav" id="nav">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <h1>Oddbird Stays</h1>
+          <h1>Oddbirds Stays Website</h1>
+        <p class="lead">A cozy stay for slow mornings and soft nights.</p>
+      </div>
+    </section>
+
+    <section class="spaces container">
+      <div class="spaces-card">
+        <div class="spaces-left">
+          <h2>Our
+            <br>Spaces</h2>
+          <p class="spaces-lead">Cozy accommodations for your next visit to Indore.</p>
+          <div class="rooms">
+            <a class="room" href="#" data-room="a">Room A</a>
+            <a class="room" href="#" data-room="b">Room B</a>
+          </div>
+        </div>
+        <div class="spaces-media">
+          <div class="slide slide-a"></div>
+          <div class="slide slide-b"></div>
+
+          <div class="room-card" aria-hidden="true">
+            <button class="room-card-close" aria-label="Close overlay">✕</button>
+            <div class="room-card-inner">
+              <h3 class="room-card-title">Room A</h3>
+              <ul class="room-features">
+                <li>👥 <strong>Sleeps 6</strong></li>
+                <li>🛏️ <strong>3 Queen Bedrooms</strong></li>
+                <li>🚿 <strong>2 Bathrooms</strong></li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn ghost" href="#">View Space</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="products container">
+      <h2 class="section-title">Featured</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1200&q=60')"></div>
+          <h3>Rattan Tray</h3>
+          <p class="price">$85</p>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=60')"></div>
+          <h3>Coastal Throw</h3>
+          <p class="price">$120</p>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1505692794409-7bd9b0b14c3a?auto=format&fit=crop&w=1200&q=60')"></div>
+          <h3>Ceramic Vase</h3>
+          <p class="price">$65</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2 class="section-title">About</h2>
+      <div class="about-inner">
+        <p>We design home goods with a focus on natural materials and timeless silhouettes. Small-batch, ethically produced.</p>
+        <a class="text-link" href="#contact">Learn more</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Oddbirds Stays Website</div>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
