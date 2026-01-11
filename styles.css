@@ -131,7 +131,13 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
   .btn{width:100%}
   .room-card-close{right:8px;top:8px;width:30px;height:30px}
 
-  .footer-inner{flex-direction:column;gap:.75rem;text-align:center}
+  .footer-inner{flex-direction:column;gap:.75rem;text-align:left;align-items:flex-start;padding:1rem 0}
+  .footer-grid{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .footer-brand{align-items:flex-start;gap:.6rem}
+  .footer-logo{height:72px}
+  .footer-name h2{font-size:1.6rem}
+  .footer-contact{width:100%}
+  .footer-contact .address,.footer-contact .contact-line{margin:0 0 .35rem}
 }
 
 /* Remove shadows (site-wide override) */
@@ -239,6 +245,11 @@ main{padding:0}
 @media (max-width:520px){
   .collage{grid-template-columns:1fr;gap:16px;padding:8px}
   .collage .collage-item{border-radius:10px}
+}
+
+@media (max-width:520px){
+  /* Add horizontal padding to place cards on small screens */
+  .place-link{padding:0 1rem}
 }
 
 /* CTA: Book Now */
