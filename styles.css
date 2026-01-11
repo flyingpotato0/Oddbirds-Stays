@@ -5,25 +5,25 @@
   --color-blue: #2b9adf; /* bird accent */
   --nav-bg: #002b25;
   --nav-text: #ebddc0;
-  --max-width:1200px;
+  --max-width:1400px;
   --accent:var(--color-gold);
   --muted:#6b6b6b;
 }
 *{box-sizing:border-box}
-body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;line-height:1.45;background:var(--color-cream)}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(--color-deep-green);line-height:1.45;background:var(--color-cream)}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
-.site-header{background:var(--nav-bg);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,0.06)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.site-header{background:var(--nav-bg);position:sticky;top:0;z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 1rem;max-width:var(--max-width);margin:0 auto;width:100%}
 .logo{display:inline-flex;align-items:center;text-decoration:none;color:var(--nav-text)}
 .logo-img{height:40px;width:auto;display:block}
-.logo-text{font-family:'Playfair Display',serif;margin-left:0.6rem;font-size:1.05rem;color:var(--nav-text);font-weight:600}
+.logo-text{font-family:'Playfair Display',serif;margin-left:0.6rem;font-size:1.7rem;letter-spacing:0.09em;color:var(--nav-text);font-weight:600;line-height:1;display:inline-flex;align-items:center;height:40px}
 .nav{display:flex;gap:1.25rem}
 .nav a{color:var(--nav-text);text-decoration:none;font-weight:500}
 .menu-toggle{display:none;background:transparent;border:0;font-size:1.4rem;color:var(--nav-text)}
 
 .hero{position:relative;overflow:hidden;height:66vh;min-height:420px;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background-color:var(--color-deep-green);background-image:url('Images/bg-test-1.jpeg');background-size:cover;background-position:center;filter:contrast(1.02) saturate(.95)}
-.hero .container{max-width:var(--max-width);margin:0;padding-left:18.5rem;padding-right:0}
+.hero .container{max-width:var(--max-width);margin:0;padding-left:15.5rem;padding-right:0}
 .hero-content{position:relative;padding:4rem 1rem;color:var(--color-cream);max-width:720px;text-align:left}
 .hero h1{font-family:'Playfair Display',serif;font-size:5rem;margin:0 0 .5rem;text-shadow:0 6px 20px rgba(0,0,0,0.5)}
 .lead{font-size:1.5rem;color:rgba(243,234,216,0.9);margin:0 0 1.25rem}
@@ -42,6 +42,10 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;
 
 /* Our Spaces card */
 .spaces-card{display:grid;grid-template-columns:420px 1fr;border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e6e6e6;margin:2rem auto;width:88%;max-width:1150px}
+.map-card{width:88%;max-width:1150px;margin:2rem auto;border-radius:16px;overflow:hidden;background:var(--color-deep-green);color:var(--color-cream);display:flex;align-items:center;justify-content:center;padding:0}
+.map-card{width:88%;max-width:1150px;margin:2rem auto;border-radius:16px;overflow:hidden;background:var(--color-deep-green);color:var(--color-cream);display:flex;align-items:center;justify-content:center;padding:0;border:8px solid var(--color-deep-green)}
+.map-card .map-inner{width:100%;height:100%;display:block}
+.map-card iframe{width:100%;height:450px;border:0;display:block;border-radius:8px}
 .spaces-left{background:var(--color-deep-green);color:var(--color-cream);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:flex-start;gap:1.5rem}
 .spaces-left h2{font-family:'Playfair Display',serif;font-size:3.4rem;margin:0;line-height:0.95}
 .spaces-lead{margin:0;color:rgba(243,234,216,0.9);max-width:300px}
@@ -55,7 +59,7 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;
 .spaces-media .slide.show{opacity:1}
 
 /* Expanded room card overlay */
-.room-card{position:absolute;left:18px;bottom:18px;width:276px;background:rgba(10,59,51,0.88);color:var(--color-cream);border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(0,0,0,0.25);transform:translateY(0);transition:opacity .25s ease,transform .25s ease;opacity:0;pointer-events:none;font-size:0.95rem}
+.room-card{position:absolute;left:18px;bottom:18px;width:276px;background:rgba(10,59,51,0.8);color:var(--color-cream);border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(0,0,0,0.25);transform:translateY(0);transition:opacity .25s ease,transform .25s ease;opacity:0;pointer-events:none;font-size:0.95rem}
 .room-card.visible{opacity:1;pointer-events:auto}
 .room-card-close{position:absolute;right:12px;top:12px;background:transparent;border:1px solid rgba(243,234,216,0.15);color:var(--color-cream);width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer}
 .room-card-title{font-family:'Playfair Display',serif;font-size:1.44rem;margin:0 0 .45rem}
@@ -76,8 +80,15 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;
   .spaces-media{min-height:420px}
 }
 
-.site-footer{border-top:1px solid #eee;padding:1.25rem 0;margin-top:2rem}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.site-footer{background:var(--color-deep-green);padding:1.25rem 0;margin-top:2rem;color:var(--color-cream)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--color-cream)}
+.footer-logo{height:210px;width:auto;display:block}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:2rem;width:100%}
+.footer-brand{display:flex;align-items:center;gap:1rem}
+.footer-name{display:flex;flex-direction:column;justify-content:center}
+.footer-name h2{font-family:'Playfair Display',serif;margin:0;font-size:2.4rem;line-height:1;color:var(--color-cream);font-weight:700}
+.muted{margin:0;color:rgba(235,221,192,0.9)}
+.footer-contact a{color:var(--color-cream);text-decoration:none}
 .footer-nav{display:flex;gap:1rem}
 .footer-nav a{color:var(--muted);text-decoration:none}
 
@@ -122,3 +133,232 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#111;
 
   .footer-inner{flex-direction:column;gap:.75rem;text-align:center}
 }
+
+/* Remove shadows (site-wide override) */
+*{box-shadow:none !important;text-shadow:none !important}
+
+
+/* Reviews / Feedback slideshow */
+.reviews{padding:2.5rem 0;background:transparent}
+.reviews-inner{display:flex;align-items:center;gap:1rem;justify-content:center}
+.review-stage{max-width:760px;flex:1;text-align:center}
+.review-slides{min-height:120px;display:flex;align-items:center;justify-content:center;position:relative}
+.review-slide{max-width:760px;padding:1.25rem 2rem;font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.25;color:var(--color-deep-green);background:transparent;opacity:0;transition:opacity .45s ease,transform .45s ease;position:absolute;left:50%;transform:translateX(-50%) translateY(6px)}
+.review-slide.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.review-meta{display:flex;flex-direction:column;align-items:center;margin-top:1rem;color:var(--muted);font-family:Inter,system-ui,sans-serif}
+.review-stars{display:flex;gap:.4rem;margin-bottom:.35rem}
+.star{width:18px;height:18px;display:inline-block;background:#f2b66a;-webkit-clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.review-nav{background:var(--color-deep-green);color:var(--color-cream);border-radius:999px;width:48px;height:48px;border:0;display:inline-flex;align-items:center;justify-content:center;font-size:1.75rem;cursor:pointer}
+.review-prev{margin-right:8px}
+.review-next{margin-left:8px}
+
+
+@media (max-width:700px){
+  .review-nav{width:40px;height:40px;font-size:1.4rem}
+  .review-slide{padding:1rem;font-size:1.15rem}
+}
+
+/* Showcase section (floating info panel over image) */
+.showcase{position:relative;min-height:333px;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.showcase .container{position:relative}
+.showcase-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700}
+.showcase-features{display:flex;gap:1rem;align-items:center}
+.showcase-features .feature{display:inline-flex;align-items:center;gap:.5rem;font-weight:600}
+
+@media (max-width:900px){
+  .showcase{min-height:254px}
+}
+
+/* Demo: split main into 50% / 50% columns colored blue and red */
+main{padding:0}
+.split{display:flex;min-height:60vh}
+.split-left{flex:0 0 50%;background:var(--nav-bg);color:var(--nav-text);display:flex;align-items:flex-start;justify-content:flex-start;padding:3rem 2.5rem}
+.split-right{flex:0 0 50%;background:var(--nav-bg);color:var(--nav-text);display:flex;align-items:center;justify-content:center;padding:3rem 2.5rem}
+.plit .split-inner{max-width:90%;text-align:center;font-size:1.25rem;font-weight:600}
+.split-right .split-inner{width:100%;max-width:820px;padding:0;display:flex;align-items:center;justify-content:center}
+.split-left .split-inner{max-width:640px;text-align:left;font-size:1.18rem;font-weight:400;color:var(--nav-text);font-family:'Playfair Display',serif;line-height:1.65}
+.split-left .split-inner h2,
+.split-left .split-inner p{font-family:'Playfair Display',serif}
+
+/* Use Arial for paragraphs inside the About block to improve readability */
+.split-left .split-inner.about p{font-family:Arial, Helvetica, sans-serif}
+
+/* Room heading: center and slightly larger */
+.split-left .split-inner.about h1{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:4rem;
+  font-weight:700;
+  margin:0 0 0rem;
+  letter-spacing:0.03em;
+}
+
+@media (max-width:900px){
+  .split-left .split-inner.about h1{font-size:2rem}
+}
+.split-left .split-inner h2{font-size:2rem;margin-bottom:0.6rem}
+.split-right .split-inner{max-width:640px;text-align:left;font-size:1.18rem;font-weight:400;color:var(--nav-text)}
+
+/* About block now uses the site `.container` for alignment; no extra left padding required */
+
+/* Center all About block content */
+.split-left .split-inner.about{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Increased letter-spacing for split content */
+.split-left .split-inner,
+.split-right .split-inner{letter-spacing:0.03em}
+.split-left .split-inner h2,
+.split-left .split-inner h3,
+.split-right .split-inner h2,
+.split-right .split-inner h3{letter-spacing:0.06em}
+
+@media (max-width:900px){
+  .split{flex-direction:column}
+  .split-left,.split-right{flex-basis:auto;width:100%}
+}
+
+/* Collage in the right column - tidy grid like the reference image */
+.collage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;width:100%;max-width:760px;margin:0 auto;padding:8px;align-items:stretch}
+.collage .collage-item{position:relative;overflow:hidden;border-radius:10px;border:none;background:#f6f1ea;box-shadow:0 12px 28px rgba(0,0,0,0.08);aspect-ratio:1/1}
+.collage .collage-item img{width:100%;height:100%;object-fit:cover;display:block}
+
+@media (min-width:1600px){
+  .collage{max-width:1820px;gap:34px}
+  .collage .collage-item{border-radius:12px}
+}
+
+@media (max-width:1000px){
+  .collage{grid-template-columns:repeat(2,minmax(196px,1fr));gap:20px;padding:10px}
+  .collage .collage-item{border-radius:12px}
+}
+
+@media (max-width:520px){
+  .collage{grid-template-columns:1fr;gap:16px;padding:8px}
+  .collage .collage-item{border-radius:10px}
+}
+
+/* CTA: Book Now */
+.cta{padding:2rem 1rem;text-align:center;margin:2rem 0}
+.cta-title{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 .75rem;color:var(--color-deep-green)}
+.book-btn{padding:1.1rem 2rem;font-size:1.18rem;border-radius:12px;display:inline-block;margin:0 auto;min-width:140px}
+
+/* Ensure the CTA container centers its children */
+.cta{display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+/* Ensure container inside CTA centers its content; place title and button side-by-side on wide screens */
+.cta .container{display:flex;flex-direction:row;align-items:center;justify-content:center;padding:0;gap:2rem}
+
+@media (max-width:520px){
+  .cta .container{flex-direction:column}
+}
+
+/* Airbnb button styling */
+.airbnb-btn{background:#FF5A5F;color:#fff;border:0;padding:1.05rem 1.8rem;display:inline-flex;align-items:center;gap:.6rem;border-radius:12px;text-decoration:none;font-weight:600}
+.airbnb-btn .book-logo{height:28px;width:auto;display:block}
+.airbnb-btn:hover{filter:brightness(.95)}
+
+/* WhatsApp button styling */
+.whatsapp-btn{background:#25D366;color:#fff;border:0;padding:1.05rem 1.6rem;display:inline-flex;align-items:center;gap:.6rem;border-radius:12px;text-decoration:none;font-weight:600}
+.whatsapp-btn span{display:inline-block}
+.whatsapp-btn:hover{filter:brightness(.95)}
+/* Force SVG icon to show on green background */
+.whatsapp-btn svg{width:24px;height:24px;display:block}
+.whatsapp-btn svg *{fill:#fff !important;stroke:none !important}
+.whatsapp-btn span{margin-left:0.35rem}
+
+/* Ensure button text is readable on small screens */
+@media (max-width:520px){
+  .airbnb-btn{padding:.8rem 1rem}
+  .airbnb-btn .book-logo{height:22px}
+  .whatsapp-btn{padding:.7rem 1rem}
+}
+
+@media (max-width:900px){
+  .cta-title{font-size:1.6rem}
+  .book-btn{width:100%;max-width:360px}
+}
+
+/* Lightbox / Slideshow overlay */
+.lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.lb-overlay.open{opacity:1;pointer-events:auto}
+.lb-stage{position:relative;max-width:95vw;max-height:92vh;width:100%;display:flex;align-items:center;justify-content:center}
+.lb-img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.6);background:#111;display:block}
+.lb-caption{color:#fff;margin-top:12px;text-align:center;font-size:0.95rem}
+.lb-close,.lb-prev,.lb-next{position:absolute;background:rgba(255,255,255,0.06);border:0;color:#fff;padding:10px;border-radius:8px;cursor:pointer}
+.lb-close{right:-6px;top:-6px}
+.lb-prev{left:-48px;top:50%;transform:translateY(-50%)}
+.lb-next{right:-48px;top:50%;transform:translateY(-50%)}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,0.12)}
+
+@media (max-width:700px){
+  .lb-prev{left:8px}
+  .lb-next{right:8px}
+  .lb-close{right:8px;top:8px}
+}
+
+/* Places of interest cards */
+.places{padding:2rem 0}
+.places-grid{display:grid;grid-template-columns:1fr;gap:1rem;max-width:1100px;margin:0 auto}
+.place-card{background:transparent;border:0;border-radius:6px;overflow:visible;display:block;height:180px}
+  .place-link{display:grid;grid-template-columns:180px 1fr;gap:0;align-items:stretch;text-decoration:none;color:inherit;padding:0;height:100%;border:1px solid #e6e6e6;border-radius:10px;overflow:hidden;background:var(--color-deep-green)}
+.place-image{width:180px;height:100%;background:linear-gradient(135deg,#eff7ff 0%,#f6f1ea 100%);background-size:cover;background-position:center;border-right:none;display:block}
+  .place-content{padding:18px 18px 18px 12px;color:var(--color-cream)}
+  .place-title{font-family:'Playfair Display',serif;margin:0 0 .5rem;color:var(--color-cream);font-size:1.05rem}
+  .place-desc{margin:0;color:rgba(235,221,192,0.95);font-size:0.95rem}
+.place-pin{position:relative;align-self:start;padding:12px}
+.place-pin svg{width:22px;height:22px;display:block}
+.place-card .pin-wrap{position:absolute;right:12px;top:12px}
+
+.places-grid .place-card:nth-child(even) .place-image{height:100%;border-right:none;border-left:none}
+
+@media (min-width:720px){
+  .places-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Features / Overview section */
+.features{padding:3rem 0;background:var(--color-cream);color:var(--color-deep-green)}
+.features .split{display:flex;gap:2rem;align-items:center;min-height:40vh}
+.features .split-left{flex:0 0 50%}
+.features .split-right{flex:1}
+.features .split-inner.about{padding:0}
+.features .badge{display:inline-block;background:#f6f1ea;padding:6px 10px;border-radius:6px;font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem}
+.features h2{font-family:'Playfair Display',serif;font-size:2.8rem;margin:0 0 0.8rem;color:var(--color-deep-green)}
+.features p{color:var(--color-deep-green);margin:0 0 1.25rem;font-size:1.05rem}
+.features-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem 4.2rem;align-items:start;width:100%;max-width:760px;margin:1.25rem auto}
+.feature{display:flex;gap:1rem;align-items:flex-start;background:transparent;padding:0}
+.feature .icon{width:56px;height:56px;flex:0 0 56px;border-radius:10px;background:transparent;color:var(--color-deep-green);display:inline-flex;align-items:center;justify-content:center}
+.feature h3{margin:0;font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--color-deep-green)}
+.feature p{margin:0;color:var(--color-deep-green);font-size:1.05rem}
+
+/* Ensure the features split shows the section background (cream)
+   instead of the global demo split background, and keep readable text */
+.features .split-left,
+.features .split-right{
+  background:transparent;
+  color:var(--color-deep-green);
+}
+
+@media (max-width:900px){
+  .features .split{flex-direction:column}
+  .features .split-left{flex-basis:auto}
+  .features h2{font-size:1.8rem}
+  .features-grid{grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+  .feature .icon{width:48px;height:48px}
+  .features .container{padding:0 1rem}
+}
+
+/* Center the features container so it aligns with the CTA */
+.features .container{display:flex;flex-direction:column;align-items:center;padding:0}
+
+
+@media (max-width:720px){
+  .place-link{grid-template-columns:120px 1fr}
+  .places-grid .place-card:nth-child(even) .place-link{grid-template-columns:1fr 120px}
+  .place-image{width:120px;height:100%}
+}
+
+

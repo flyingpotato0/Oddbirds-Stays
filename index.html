@@ -1,24 +1,24 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Oddbirds Stays Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>Oddbirds Stays Website</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#" aria-label="Oddbirds Stays">
+      <a class="logo" href="index.html" aria-label="Oddbirds Stays">
         <img src="Images/odbd-logo-transparent.svg" alt="Oddbirds Stays logo" class="logo-img">
         <span class="logo-text">Oddbirds</span>
       </a>
-      <nav class="nav" id="nav">
-        <a href="#shop">Placeholder</a>
-        <a href="#about">Placeholder</a>
-        <a href="#contact">Placeholder</a>
-      </nav>
+
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
     </div>
   </header>
@@ -32,11 +32,109 @@
       </div>
     </section>
 
+    <!-- Features / Overview (added) -->
+    <section class="features container">
+      <div class="split">
+        <div class="split-left">
+          <div class="split-inner about">
+            <h2
+              style="font-family:'Playfair Display',serif;font-size:2.8rem;margin:0 0 .6rem;color:var(--color-deep-green)">
+              Stylish, comfy stays in Indore — where cozy meets classic.</h2>
+          </div>
+        </div>
+
+        <div class="split-right">
+          <div class="features-grid">
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Posh Locality</h3>
+                <p>Stay in Indore’s best neighborhoods — close to everything.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="6" rx="1.5"></rect>
+                  <circle cx="7.5" cy="17" r="1.5"></circle>
+                  <circle cx="16.5" cy="17" r="1.5"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3>Free Parking</h3>
+                <p>Free on-site parking for guests.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5v14"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Smart Living</h3>
+                <p>Fast Wi‑Fi, AC, and in-room entertainment to help you unwind.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7h18M7 21h10a2 2 0 0 0 2-2V7H5v12a2 2 0 0 0 2 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Equipped Kitchen</h3>
+                <p>A fully stocked kitchen — cook whenever you want.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a7 7 0 0 0 0-6"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Entertainment</h3>
+                <p>Smart TV with your favourite streaming apps for chill evenings.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Thoughtful Touches</h3>
+                <p>Little extras that make your stay feel easy and welcoming.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="spaces container">
       <div class="spaces-card">
         <div class="spaces-left">
           <h2>Our
-          <br>Spaces</h2>
+            <br>Spaces</h2>
           <p class="spaces-lead">Cozy accommodations for your next visit to Indore.</p>
           <div class="rooms">
             <a class="room" href="#" data-room="a">Room A</a>
@@ -57,7 +155,7 @@
                 <li>🚿 <strong>2 Bathrooms</strong></li>
               </ul>
               <div class="room-actions">
-                <a class="btn ghost" href="#">View Space</a>
+                <a class="btn ghost" href="suite-a.html">View Space</a>
               </div>
             </div>
           </div>
@@ -65,27 +163,87 @@
       </div>
     </section>
 
-    <!-- Featured section removed -->
+    <!-- Embedded map (placed before Places of interest) -->
+    <div class="map-card">
+      <div class="map-inner">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.8202712679567!2d75.8915603!3d22.7720503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963030060d23adf%3A0x3d3cc2dc4c8f6cea!2sOddbird%20Stays!5e0!3m2!1sen!2sin!4v1768152280836!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
 
-    <section id="about" class="about container">
-      <h2 class="section-title">About</h2>
-      <div class="about-inner">
-        <p>We design home goods with a focus on natural materials and timeless silhouettes. Small-batch, ethically produced.</p>
-        <a class="text-link" href="#contact">Learn more</a>
+    <!-- Places of interest -->
+    <section id="places" class="places container">
+      <div class="places-inner">
+        <div class="places-header" style="text-align:center;max-width:920px;margin:2.75rem auto 1rem">
+          <div style="font-size:1rem;letter-spacing:.18em;color:#444;margin-bottom:.6rem">THINGS TO DO</div>
+          <h2
+            style="font-family:'Playfair Display',serif;font-size:1.45rem;margin:0 0 .6rem;color:var(--color-deep-green)">
+            Experience a variety of exciting activities and attractions in the area</h2>
+        </div>
+
+        <div class="places-grid" id="placesGrid" aria-live="polite"></div>
       </div>
     </section>
+    <!-- Inline fallback for places data (used when fetch is blocked e.g. opening file://) -->
+    <script id="placesData" type="text/plain">
+      Pheonix Citadel Mall - https://maps.app.goo.gl/URYTPzaybPadjhEPA
+56 Dukaan - https://maps.app.goo.gl/ADgXhW7haJu2nBqH9
+Rajwada Palace - https://maps.app.goo.gl/p2TPsZ67P3VhGi8j7
+Sarafa Bazar - https://maps.app.goo.gl/uVXQKBZ32qhLQ9wq5
+Kamla Nehru Zoo - https://maps.app.goo.gl/6iajtsdhGk8P22Sv6
+Bhag Buddhist Caves (Dhar) - https://maps.app.goo.gl/DV8qTArxD1R15phL6
+Maheshwar Ghat - https://maps.app.goo.gl/aKqSNpXtCFj6tPzP9
+Ujjain - https://maps.app.goo.gl/RNoZvGKpGDmsECty7
+    </script>
+
+    <!-- Reviews / Feedback slideshow -->
+    <section id="reviews" class="reviews container">
+      <div class="reviews-inner">
+        <button class="review-nav review-prev" aria-label="Previous review">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14M5 12l4-4m-4 4 4 4" />
+          </svg>
+        </button>
+
+        <div class="review-stage">
+          <div class="review-slides" aria-live="polite"></div>
+        </div>
+
+        <button class="review-nav review-next" aria-label="Next review">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 12H5m14 0-4 4m4-4-4-4" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
   </main>
 
   <footer id="contact" class="site-footer">
-      <div class="container footer-inner">
-        <div>© <span id="year"></span> Oddbirds Stays Website</div>
-      <nav class="footer-nav">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </nav>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Images/odbd-logo-transparent.svg" alt="Oddbirds logo" class="footer-logo">
+          <div class="footer-name">
+            <h2>Oddbirds Stays</h2>
+            <p class="muted">Cozy stays in Indore</p>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p class="address">1402Q, near Mangliya, Part I, Scheme No 114<br>Indore, Madhya Pradesh 452010</p>
+          <p class="contact-line">Email: <a href="mailto:oddbirdstays@gmail.com">oddbirdstays@gmail.com</a></p>
+          <p class="contact-line">Phone: <a href="tel:+917000939044">(+91) 7000939044</a>, <a href="tel:+917406933735">(+91) 7406933735</a></p>
+          <div class="footer-copy">© <span id="year"></span> Oddbirds Stays</div>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
