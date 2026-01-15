@@ -21,7 +21,7 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
 .nav a{color:var(--nav-text);text-decoration:none;font-weight:500}
 .menu-toggle{display:none;background:transparent;border:0;font-size:1.4rem;color:var(--nav-text)}
 
-.hero{position:relative;overflow:hidden;height:66vh;min-height:420px;display:flex;align-items:center}
+.hero{position:relative;overflow:hidden;height:56vh;min-height:360px;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background-color:var(--color-deep-green);background-image:url('Images/bg-test-1.jpeg');background-size:cover;background-position:center;filter:contrast(1.02) saturate(.95)}
 .hero .container{max-width:var(--max-width);margin:0;padding-left:15.5rem;padding-right:0}
 .hero-content{position:relative;padding:4rem 1rem;color:var(--color-cream);max-width:720px;text-align:left}
@@ -94,7 +94,8 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
 
 @media (max-width:800px){
   .hero h1{font-size:2.1rem}
-  .menu-toggle{display:block}
+  .hero .container{padding-left:1rem;padding-right:1rem}
+  .menu-toggle{display:none}
   .nav{position:fixed;right:0;top:0;height:100vh;width:75%;max-width:300px;background:var(--nav-bg);transform:translateX(110%);flex-direction:column;padding:4rem 1.25rem;gap:1.25rem;box-shadow:-8px 0 24px rgba(0,0,0,.08);transition:transform .28s}
   .nav.open{transform:translateX(0)}
   .header-inner{gap:1rem}
@@ -104,12 +105,14 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
 /* Phone optimizations */
 @media (max-width:480px){
   .logo-img{height:32px}
-  .logo-text{display:none}
+  /* .logo-text{display:none} */
+  .logo-text{font-size:1.4rem}
   .header-inner{padding:0.5rem 0.75rem}
   .menu-toggle{font-size:1.2rem}
 
-  .hero{height:48vh;min-height:300px}
+  .hero{height:42vh;min-height:260px}
   .hero h1{font-size:1.8rem}
+  .hero .container{padding-left:.75rem;padding-right:.75rem}
   .lead{font-size:1rem}
   .hero-content{padding:1.5rem .75rem;max-width:100%}
 
@@ -133,10 +136,10 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
 
   .footer-inner{flex-direction:column;gap:.75rem;text-align:left;align-items:flex-start;padding:1rem 0}
   .footer-grid{flex-direction:column;align-items:flex-start;gap:.75rem}
-  .footer-brand{align-items:flex-start;gap:.6rem}
+  .footer-brand{align-items:center;gap:.6rem}
   .footer-logo{height:72px}
   .footer-name h2{font-size:1.6rem}
-  .footer-contact{width:100%}
+  .footer-contact{width:100%; margin-left: 10px}
   .footer-contact .address,.footer-contact .contact-line{margin:0 0 .35rem}
 }
 
@@ -160,8 +163,11 @@ body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:var(-
 
 
 @media (max-width:700px){
+  /* Add horizontal padding and increase text spacing for reviews on small screens */
+  .reviews{padding-left:1rem;padding-right:1rem}
+  .review-stage{padding:0 0.75rem}
   .review-nav{width:40px;height:40px;font-size:1.4rem}
-  .review-slide{padding:1rem;font-size:1.15rem}
+  .review-slide{padding:1rem 1rem;font-size:1.15rem;max-width:100%}
 }
 
 /* Showcase section (floating info panel over image) */
@@ -252,8 +258,19 @@ main{padding:0}
   .place-link{padding:0 1rem}
 }
 
+/* Add margin/spacing for place cards on small screens to give breathing room */
+@media (max-width:720px){
+  .places-grid{padding:0 1rem;gap:1rem}
+  .place-card{margin:0.6rem 0;height:auto}
+  .place-link{grid-template-columns:120px 1fr}
+  /* .places-grid .place-card:nth-child(even) .place-link{grid-template-columns:1fr 120px} */
+  .place-image{width:120px;height:100%}
+  .place-content{padding:14px}
+  .place-title{text-align:left}
+}
+
 /* CTA: Book Now */
-.cta{padding:2rem 1rem;text-align:center;margin:2rem 0}
+.cta{padding:0 1rem 2rem 1rem;text-align:center}
 .cta-title{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 .75rem;color:var(--color-deep-green)}
 .book-btn{padding:1.1rem 2rem;font-size:1.18rem;border-radius:12px;display:inline-block;margin:0 auto;min-width:140px}
 
@@ -357,7 +374,7 @@ main{padding:0}
   .features .split{flex-direction:column}
   .features .split-left{flex-basis:auto}
   .features h2{font-size:1.8rem}
-  .features-grid{grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+  .features-grid{grid-template-columns:1fr;margin-top: 0;padding: 0 1rem;}
   .feature .icon{width:48px;height:48px}
   .features .container{padding:0 1rem}
 }
@@ -366,10 +383,10 @@ main{padding:0}
 .features .container{display:flex;flex-direction:column;align-items:center;padding:0}
 
 
-@media (max-width:720px){
+/* @media (max-width:720px){
   .place-link{grid-template-columns:120px 1fr}
   .places-grid .place-card:nth-child(even) .place-link{grid-template-columns:1fr 120px}
   .place-image{width:120px;height:100%}
-}
+} */
 
 
